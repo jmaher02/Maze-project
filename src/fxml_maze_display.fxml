@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="MazeController">
+ <center>
+  <VBox fx:id="canvasContainer" alignment="center"
+     style="-fx-background-color:black;-fx-border-color:white;-fx-border-width:1"/>
+ </center>
+ <left>
+  <VBox spacing="10" alignment="center" 
+        style="-fx-background-color:black;-fx-border-color:white;-fx-border-width:1;-fx-padding:8">
+    <Label text="Solve the Maze" fx:id="header"
+            style="-fx-font-size:24pt;" />
+    <Button text="Solve, Recursive" fx:id="solveR"  
+            onAction = "#solveRecursive" />
+    <Button text="Solve, Iterative" fx:id="solveI"  
+            onAction = "#solveIterative" />
+    <Button text="Move Forward" fx:id="moveButton" 
+            onAction = "#moveForward" />
+    <Button text="Turn Right" fx:id="rightButton"
+            onAction = "#turnRight" /> 
+    <Button text="Turn Left" fx:id="leftButton"  
+            onAction = "#turnLeft"  />
+    <Button text="Start Over" fx:id="restart"
+            onAction = "#restart" />
+    <Label  text="" fx:id="label"  />   
+  </VBox>
+ </left>
+</BorderPane>
